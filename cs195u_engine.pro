@@ -148,7 +148,7 @@ DISTFILES += \
     res/images/COLORED_2.jpg \
     res/images/CORRED_1.jpg \
     res/images/marble.png \
-    res/images/stone.png \
+    res/images/newStone.png \
     res/images/marble.png \
     res/images/stone2.png \
     res/images/terrain.png \

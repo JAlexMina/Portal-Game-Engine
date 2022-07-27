@@ -60,7 +60,7 @@ void GameWorld::setup(Graphics* g)
 
 
 
-    g->addTexture("stoneFloor", ":/images/COLORED_2.jpg");
+    g->addTexture("stoneFloor", ":/images/newStone.png");
     Material terrainFloor;
     terrainFloor.textureName = "stoneFloor";
     g->addMaterial("stoneFloor", terrainFloor);
@@ -489,7 +489,7 @@ void GameWorld::drawSimple(Graphics* g)
 
 
     c2 = new DrawableComponent (":/images/stoneNew.png", "stoneNew", "Chunk", false, rep);
-    c2->m_repeat = glm::vec2(10.f, 10.f);
+    c2->m_repeat = glm::vec2(4.f, 2.f);
     curr.m_position = currC_Pos;
 
     c2->transform = new TransformComponent (curr.m_position , 1.f);
@@ -519,7 +519,7 @@ void GameWorld::drawSimple(Graphics* g)
 
 
     f2 = new DrawableComponent (":/images/stoneNew.png", "stoneFloor", "ChunkFloor", false, rep);
-    f2->m_repeat = glm::vec2(1.f, 1.f);
+    f2->m_repeat = glm::vec2(8.f, 8.f);
     curr.m_position = currC_Pos;
 
     f2->transform = new TransformComponent (curr.m_position , 1.f);

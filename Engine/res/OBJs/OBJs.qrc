@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/OBJs">
+        <file>seahorse.obj</file>
+        <file>Koltuk.obj</file>
+        <file>buddha.obj</file>
+        <file>natkins.obj</file>
+        <file>dragon.obj</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>

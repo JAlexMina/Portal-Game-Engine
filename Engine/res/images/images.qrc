@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>grass.png</file>
+        <file>no-Image.png</file>
+        <file>Barrel_texture.png</file>
+        <file>grass_minecraft.png</file>
+        <file>sky.png</file>
+        <file>sky2.png</file>
+        <file>Sky3.png</file>
+        <file>stone.png</file>
+        <file>stone2.png</file>
+        <file>terrain.png</file>
+        <file>stoneNew.png</file>
+        <file>CORRED_1.jpg</file>
+        <file>COLORED_2.jpg</file>
+        <file>marble.png</file>
+    </qresource>
+</RCC>

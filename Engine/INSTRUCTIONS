@@ -1,0 +1,11 @@
+To play my game in the current state,
+
+the player can move around using WASD and
+the mouse to move the player and orient the
+camera. You can Pause the game by pressing 'p'
+and change to a third person camera by
+pressing 'v' for view. The player can push around
+an objects go through protals. The objects the player
+pushes can also go throught the portals.
+
+

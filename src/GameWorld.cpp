@@ -174,12 +174,11 @@ void GameWorld::setup(Graphics* g)
 
     //Portal Objects \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-
     //frame of 1
-    drawPortal1frame = new DrawableComponent (":/images/CORRED_1.jpg", "portal1frame", "cube", false);
+    drawPortal1frame = new DrawableComponent (":/images/COLORED_2.jpg", "Portal1frame", "cube", false);
     Portal1frame.m_position = glm::vec3(6.f, 2.5f, 0.0f);
     drawPortal1frame->transform = new TransformComponent (Portal1frame.m_position , 3.5f, 5.5f, 0.05f);
-//    drawPortal1frame->transform->setRotate(glm::vec3(0.f, 1.f, 0.f), -1.5708, glm::vec3(0.f, 1.f, 0.f), 0);
+    drawPortal1frame->transform->setRotate(glm::vec3(0.f, 1.f, 0.f), -1.5708, glm::vec3(0.f, 1.f, 0.f), 1.5708);
     Portal1frame.addComponent(drawPortal1frame->transform, "TransformComponent");
     Portal1frame.addComponent(drawPortal1frame, "DrawableComponent");
 
@@ -189,19 +188,25 @@ void GameWorld::setup(Graphics* g)
     Portal1frame.addComponent(collidePortal1frame, "CollisionComponent");
 
 
-    drawPortal1 = new DrawableComponent (":/images/Barrel_texture.png", "portal1", "cube", true);  // <-------------------
+    drawPortal1 = new DrawableComponent (":/images/Barrel_texture.png", "Portal1", "quad", true);    // <-------------------
     Portal1.m_position = glm::vec3(6.f, 2.5f, 0.1f);
-    drawPortal1->transform = new TransformComponent (Portal1.m_position , 3.f, 5.f, 0.05f);
-    Portal1.addComponent(drawPortal1->transform, "TransformComponent");
-    Portal1.addComponent(drawPortal1, "DrawableComponent");
     Portal1.portal_forward = glm::vec3(0.f, 0.f, 1.f);
     Portal1.portal_up = glm::vec3(0.f, 1.f, 0.f);
-    Portal1.portal_right = glm::vec3(-1.f, 0.f, 0.f);
+    Portal1.portal_right = glm::vec3(1.f, 0.f, 0.f);
+    drawPortal1->transform = new TransformComponent (Portal1.m_position , 3.f, 1.f, 5.f);
+    drawPortal1->transform->setRotate(glm::vec3(0.f, 0.f, 1.f), 0, glm::vec3(1.f, 0.f, 0.f), 1.5708);
+    Portal1.addComponent(drawPortal1->transform, "TransformComponent");
+    Portal1.addComponent(drawPortal1, "DrawableComponent");
 
 
     //adding collision component
-    collidePortal1 = new CollisionComponent (Portal1.m_position, 3.f - (drawCylinder->transform->m_size/2.f), 5.f, 0.05f, "cube", false, m_camera, "port");
+    collidePortal1 = new CollisionComponent (Portal1.m_position, 0.05f, 5.f, 3.f - (drawCylinder->transform->m_size/2.f), "cube", false, m_camera, "port");
     Portal1.addComponent(collidePortal1, "CollisionComponent");
+
+
+
+
+    //frame 2 ////////////////////////////////////////////////////////////////////////////////
 
 
     //frame of 2
@@ -224,7 +229,6 @@ void GameWorld::setup(Graphics* g)
     Portal2.portal_up = glm::vec3(0.f, 1.f, 0.f);
     Portal2.portal_right = glm::vec3(0.f, 0.f, 1.f);
     drawPortal2->transform = new TransformComponent (Portal2.m_position , 3.f, 1.f, 5.f);
-    //drawPortal2->transform = new TransformComponent (Portal2.m_position , 1.f, 1.f, 1.f);
     drawPortal2->transform->setRotate(glm::vec3(0.f, 0.f, 1.f), -1.5708, glm::vec3(0.f, 1.f, 0.f), 1.5708);
     Portal2.addComponent(drawPortal2->transform, "TransformComponent");
     Portal2.addComponent(drawPortal2, "DrawableComponent");
@@ -233,6 +237,8 @@ void GameWorld::setup(Graphics* g)
     //adding collision component
     collidePortal2 = new CollisionComponent (Portal2.m_position, 0.05f, 5.f, 3.f - (drawCylinder->transform->m_size/2.f), "cube", false, m_camera, "port");
     Portal2.addComponent(collidePortal2, "CollisionComponent");
+
+
 
     //Portal Objects end\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 

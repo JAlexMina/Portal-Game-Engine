@@ -7,5 +7,6 @@ add portals! They are able to show what you
 would see if there was an actual portal to a 
 different location in space.
 
-My second feature is sound of which I have 2 sound 
-effects and 1 sound track that loops.
+<img src="Capture.PNG"
+     alt=""
+     style="float: left; margin-right: 10px;" />

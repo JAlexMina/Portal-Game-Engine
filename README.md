@@ -12,4 +12,6 @@ different location in space.
      style="float: left; margin-right: 10px;" />
 
      
-     [![Watch the video](Capture2.PNG)](https://youtu.be/rDVx1Ql6K8Q)
+     <!-- [![Watch the video](Capture2.PNG)](https://youtu.be/rDVx1Ql6K8Q) -->
+
+     <a href="https://youtu.be/rDVx1Ql6K8Q"><img src="Capture2.PNG" alt="Video" style="width:42px;height:42px;"></a>

@@ -1,6 +1,6 @@
 
 Moving the mouse pans the camera,
-Pressing wasd keys moves the player.
+pressing wasd keys moves the player.
 
 My main implimentation for the final was to 
 add portals! They are able to show what you 

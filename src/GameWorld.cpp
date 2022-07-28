@@ -109,18 +109,6 @@ void GameWorld::setup(Graphics* g)
     //adding drawable component
 
 
-
-//    drawCylinderEnemy = new DrawableComponent (":/images/no-Image.png", "no-Image", "enemy", g);
-//    cylinderEnemy.m_position = glm::vec3(5.f, 3.f, 5.f);
-//    drawCylinderEnemy->transform = new TransformComponent (cylinderEnemy.m_position , 2.5f);
-//    cylinderEnemy.addComponent(drawCylinderEnemy->transform, "TransformComponent");
-//    cylinderEnemy.addComponent(drawCylinderEnemy, "DrawableComponent");
-
-//    CylinderEnemyAI = new PathFinderComponent(false, glm::vec3());
-//    cylinder.addComponent(CylinderEnemyAI, "PathFinderComponent");
-
-
-
     drawCylinder = new DrawableComponent (":/images/Barrel_texture.png", "barrel", "cylinder", false);
     cylinder.m_position = glm::vec3(3.f, 0.f, 5.f);
     drawCylinder->transform = new TransformComponent (cylinder.m_position , 1.5f);
@@ -154,9 +142,6 @@ void GameWorld::setup(Graphics* g)
     //adding collision component
 //    collideCylinderEnemy = new CollisionComponent (cylinderEnemy.m_position, 0.7333333f, 2.f, "cylinder", false, m_camera);
 //    cylinderEnemy.addComponent(collideCylinderEnemy, "CollisionComponent");
-
-
-
 
 
 
@@ -297,12 +282,6 @@ void GameWorld::setup(Graphics* g)
 
     drawCylinderPlayer->transform->m_loc = glm::vec3(m_camera->m_pos.x, m_camera->m_pos.y - 2.5f, m_camera->m_pos.z);
     m_draw.addObj("cylinder3", camera);
-
-
-
-
-    
-
 }
 
 
@@ -326,7 +305,6 @@ void GameWorld::assureChunks(Graphics* g)
         cWest = curr;
         curr = cEast;
         //m_pathfinder.setRooms(curr.rooms);
-
     }
     else if(camera.m_position.x > currC_Pos.x + offset)
     {
@@ -335,7 +313,6 @@ void GameWorld::assureChunks(Graphics* g)
         cEast = curr;
         curr = cWest;
         //m_pathfinder.setRooms(curr.rooms);
-
     }
     else if(camera.m_position.z < currC_Pos.z )
     {
@@ -344,7 +321,6 @@ void GameWorld::assureChunks(Graphics* g)
         cSouth = curr;
         curr = cNorth;
         //m_pathfinder.setRooms(curr.rooms);
-
     }
     else if(camera.m_position.z > currC_Pos.z + offset)
     {
@@ -353,7 +329,6 @@ void GameWorld::assureChunks(Graphics* g)
         cNorth = curr;
         curr = cSouth;
         //m_pathfinder.setRooms(curr.rooms);
-
     }
     else if(once) //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     {
@@ -383,12 +358,9 @@ void GameWorld::assureChunks(Graphics* g)
         curr.addComponent(collideC, "CollisionComponent");
         m_collide.addObj("curr", curr);
 
-
         m_objects["Chunk"] = curr;
         curr.name = "Chunk";
         m_draw.addObj("Chunk", curr);
-
-
 
 
         //chunk #2 NORTH //////////////////////////////////////////////////////////
@@ -553,7 +525,7 @@ void GameWorld::music_and_sound(float seconds)
     int length = 30;
 
 
-        sec += seconds;
+    sec += seconds;
 
 
 
